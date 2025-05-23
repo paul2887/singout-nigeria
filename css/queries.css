@@ -738,5 +738,42 @@
   }
 }
 
+/* Add this to your media queries section - around line 400+ in your queries.css file */
 
-
+@media screen and (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0 30px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .social-media {
+    justify-content: center;
+  }
+  
+  /* Fix for contact info centering */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    justify-content: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .footer-bottom-links {
+    gap: 15px;
+  }
+}
