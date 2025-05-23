@@ -545,6 +545,33 @@ main > * {
   width: 20px;
 }
 
+.contact-info {
+  font-family: Arial, sans-serif;
+  line-height: 2;
+  color: #333;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  gap: 8px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  font-size: 1.3em;
+  vertical-align: middle;
+  color: #fff;
+}
+
+
+
 /* Social Media */
 .social-media {
   display: flex;
@@ -607,6 +634,11 @@ main > * {
   color: white;
 }
 
+.social-link.website:hover {
+  background: #007acc;
+  color: white;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid #333;
@@ -641,12 +673,3 @@ main > * {
 .footer-bottom-links a:hover {
   color: #ff922b;
 }
-
-
-
-
-
-
-
-
-
