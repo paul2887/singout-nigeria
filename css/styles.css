@@ -674,3 +674,7 @@ main > * {
   color: #ff922b;
 }
 
+.footer-section img {
+  margin-left: -1rem;
+}
+
