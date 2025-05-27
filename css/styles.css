@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: black;
+  background-color: #000;
   z-index: 1000;
   padding: 10px 20px;
   margin-bottom: 0;
@@ -39,23 +38,6 @@ header {
   display: flex;
   gap: 3rem;
 }
-
-/* .header-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.header-nav a:hover {
-  text-decoration: none;
-  color: #ff922b;
-}
-
-.header-nav ul li a:last-child {
-  color: #fff;
-  background-color: #ff922b;
-  padding: 1rem;
-} */
 
 .header-nav ul a:link,
 .header-nav ul a:visited {
@@ -80,45 +62,32 @@ header {
   color: #fff;
 }
 
-/* Main section with background image */
-/* main {
-  background-image: url("../img/backgroung\ img.jpg");
-  filter: brightness(0.6) opacity(0.5);
-  background-size: cover;
-  background-position: center;
-  padding: 50px 20px;
-  min-height: 100vh;
-} */
-
 main {
   position: relative;
   padding: 50px 20px;
   min-height: 100vh;
-  color: white; /* keep text readable */
-  /* Remove background-image from here */
+  color: white;
 }
 
 main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/backgroung img.jpg"); /* fix your path & spelling */
+  background-image: url("../img/backgroung img.jpg");
   background-size: cover;
   background-position: center;
   filter: brightness(1);
-  opacity: 0.5; /* opacity on pseudo-element only */
-  z-index: -1; /* behind text */
+  opacity: 0.5;
+  z-index: -1;
 }
-
 main > * {
   position: relative;
-  z-index: 1; /* bring content above background */
+  z-index: 1;
 }
-
 
 /* About section */
 .about {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   /* padding: 20px; */
   color: #fff;
   display: flex;
@@ -131,16 +100,15 @@ main > * {
   text-align: center;
 }
 
-/* Increase font sizes in rem */
 .about h1 {
-  font-size: 3rem; /* Bigger heading */
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #ff922b; /* Brand color */
+  color: #ff922b;
   text-transform: uppercase;
 }
 
 .about p {
-  max-width: 600px; /* Adjust width to fit exactly 2 lines */
+  max-width: 600px;
   margin: 0 auto 1rem;
   font-size: 1.25rem;
   line-height: 1.6;
@@ -161,7 +129,6 @@ main > * {
   flex-direction: row-reverse;
 }
 
-/* Image styling */
 .about-item img {
   width: 150px;
   height: auto;
@@ -178,7 +145,7 @@ main > * {
 }
 
 .about {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -187,22 +154,22 @@ main > * {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 5%; /* Add some side padding for responsiveness */
+  padding: 0 5%;
 }
 
 .about h1 {
-  font-size: 2.8rem; /* Close to BE YOURSELF h1 size */
+  font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color: #ff922b; /* Brand orange */
+  color: #ff922b;
   text-transform: uppercase;
 }
 
 .about-item {
   display: flex;
   align-items: center;
-  gap: 40px; /* Increase gap for breathing space */
-  margin-bottom: 60px; /* More vertical spacing */
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .about-item:nth-child(even) {
@@ -210,7 +177,7 @@ main > * {
 }
 
 .about-item img {
-  width: 180px; /* Slightly bigger images */
+  width: 180px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -218,8 +185,8 @@ main > * {
 
 .about-item p {
   flex: 1;
-  font-size: 1.4rem; /* Larger paragraph text */
-  font-weight: 600; /* Semi-bold for emphasis */
+  font-size: 1.4rem;
+  font-weight: 600;
   line-height: 1.6;
   color: #fff;
   margin: 0;
@@ -299,23 +266,26 @@ main > * {
 .register-header {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ff922b; /* same orange color */
+  color: #ff922b;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
 }
-
 
 .notice-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: space-between;
-  align-items: center; /* Vertically center the columns */
+  align-items: center;
 }
 
 .notice-text {
   flex: 1 1 50%;
+}
+
+.notice-text-1 {
+  margin-bottom: 3rem;
 }
 
 .notice-text h1 {
@@ -324,14 +294,20 @@ main > * {
   margin-bottom: 0.5em;
 }
 
-.orange {
-  color: #ff922b;
+.notice-text h2 {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .notice-text h3 {
   font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.orange {
+  color: #ff922b;
 }
 
 .notice-text p {
@@ -341,11 +317,11 @@ main > * {
 
 .notice-image {
   flex: 1 1 40%;
-  text-align: center; /* Center image horizontally */
+  text-align: center;
 }
 
 .notice-image img {
-  width: 70%; /* Smaller image */
+  width: 70%;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -353,6 +329,10 @@ main > * {
 .notice-button {
   margin-top: 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
 }
 
 .btn-wide {
@@ -361,7 +341,7 @@ main > * {
   color: black;
   font-weight: bold;
   padding: 15px 30px;
-  width: 50%;
+  width: 20%;
   max-width: 100%;
   text-align: center;
   text-decoration: none;
@@ -375,16 +355,17 @@ main > * {
 }
 
 
+.pay-online {
+  color: #fff;
+  background-color: #ff922b;
+}
 
+.pay-online:hover {
+  color: #ff922b;
+  background-color: #fff;
+}
 
-
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES FOR SKY MUSIC WEBSITE WITH HAMBURGER MENU
-   ========================================================================== */
-
-/* ==========================================================================
-   HAMBURGER MENU STYLES (Hidden by default)
-   ========================================================================== */
+/* HAMBURGER MENU STYLES (Hidden by default)*/
 
 /* Hamburger button - hidden by default, shown below 744px */
 .hamburger {
@@ -438,18 +419,7 @@ main > * {
   visibility: visible;
 }
 
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   FOOTER STYLES
-   ========================================================================== */
+/* FOOTER STYLES */
 
 .main-footer {
   background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
@@ -459,7 +429,7 @@ main > * {
 }
 
 .main-footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -570,13 +540,11 @@ main > * {
   color: #fff;
 }
 
-
-
 /* Social Media */
 .social-media {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .social-link {
@@ -610,7 +578,15 @@ main > * {
 }
 
 .social-link.instagram:hover {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
   color: white;
 }
 
@@ -677,4 +653,3 @@ main > * {
 .footer-section img {
   margin-left: -1rem;
 }
-
